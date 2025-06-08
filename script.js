@@ -111,7 +111,7 @@ document.getElementById('calcular').addEventListener('click', () => {
       <td>R$ ${f.juros}</td>
       <td>R$ ${f.amortizacao}</td>
       <td>R$ ${f.parcela}</td>
-      <td>R$ ${f.saldo}</td>
+      <td class="coluna-borda">R$ ${f.saldo}</td>
       <td>R$ ${s.juros}</td>
       <td>R$ ${s.amortizacao}</td>
       <td>R$ ${s.parcela}</td>
