@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Financiamento</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Simulador de Financiamento - SAC vs Parcela Fixa</h1>
+  <label>Valor do financiamento: <input id="valor" type="number" /></label>
+  <label>Nº de parcelas: <input id="parcelas" type="number" /></label>
+  <label>Taxa de juros (% a.m.): <input id="juros" type="number" /></label>
+  <label>Parcela fixa desejada (R$): <input id="parcelaFixa" type="number" /></label>
+  <button id="calcular">Calcular</button>
+
+  <h2>Resumo</h2>
+  <div id="resumo">
+    <p><strong>SAC:</strong> <span id="sacResumo"></span></p>
+    <p><strong>Parcela Fixa:</strong> <span id="fixaResumo"></span></p>
+  </div>
+
+  <table id="resultado">
+    <thead>
+      <tr>
+        <th>Mês</th>
+        <th>Juros Fixa</th>
+        <th>Amort. Fixa</th>
+        <th>Parcela Fixa</th>
+        <th>Saldo Fixa</th>
+        <th>Juros SAC</th>
+        <th>Amort. SAC</th>
+        <th>Parcela SAC</th>
+        <th>Saldo SAC</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="graficos">
+    <div class="grafico">
+      <h3>Juros Mensais</h3>
+      <canvas id="graficoJuros" width="700" height="300"></canvas>
+    </div>
+    <div class="grafico">
+      <h3>Saldo Devedor</h3>
+      <canvas id="graficoSaldo" width="700" height="300"></canvas>
+    </div>
+    <div class="grafico">
+      <h3>Parcelas</h3>
+      <canvas id="graficoParcelas" width="700" height="300"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
